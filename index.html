@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <body style="margin:0;padding:0;">
+    <iframe 
+      id="twitch-player"
+      src=""
+      height="100%" 
+      width="100%" 
+      frameborder="0" 
+      allowfullscreen="true">
+    </iframe>
 
-<body style="margin:0;padding:0;">
-  <iframe src="https://player.twitch.tv/?channel=auronplay&parent=eloquent-strudel-4dd020.netlify.app" height="100%"
-    width="100%" frameborder="0" allowfullscreen="true">
-  </iframe>
-</body>
-
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const channel = params.get("channel") || "auronplay"; // Valor por defecto
+      const parent = "eloquent-strudel-4dd020.netlify.app";
+      const embedUrl = `https://player.twitch.tv/?channel=${channel}&parent=${parent}`;
+      document.getElementById("twitch-player").src = embedUrl;
+    </script>
+  </body>
 </html>
