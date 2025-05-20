@@ -2,41 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stream de Twitch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Embed Twitch</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #18181b;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
+      margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background: #18181b;
     }
-
     iframe {
-      display: block;
+      border: none;
       width: 100%;
       height: 100%;
-      border: none;
     }
-  
   </style>
 </head>
 <body>
-<iframe
-    id="twitch-player"
-    src="https://player.twitch.tv/?channel=VEGETTA777&parent=dpactir2707.github.io"
-    allowfullscreen
-    scrolling="no"
+  <iframe
+    src="https://player.twitch.tv/?channel=vegetta777&parent=dpactir2707.github.io"
+    allowfullscreen="true"
+    allow="fullscreen; autoplay"
   ></iframe>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const channel = params.get("channel") || "auronplay";
-    const parent = "dpactir2707.github.io";
-    const embedUrl = `https://player.twitch.tv/?channel=${channel}&parent=${parent}`;
-    document.getElementById("twitch-player").src = embedUrl;
-  </script>
 </body>
 </html>
