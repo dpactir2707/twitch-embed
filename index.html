@@ -14,7 +14,7 @@
       overflow: hidden;
     }
 
-      iframe {
+    iframe {
       display: block;
       width: 100%;
       height: 100%;
@@ -26,17 +26,17 @@
 <body>
 <iframe
     id="twitch-player"
-    src="https://player.twitch.tv/?channel=illojuan&parent=dpactir2707.github.io"
-    allowfullscreen
+    src="https://player.twitch.tv/?channel=VEGETTA777&parent=dpactir2707.github.io"
+    allowfullscreen="true"
     scrolling="no"
   ></iframe>
 
   <script>
-  const params = new URLSearchParams(window.location.search);
-  const channel = params.get("channel") || "auronplay";
-  const parent = "dpactir2707.github.io";
-  const embedUrl = `https://player.twitch.tv/?channel=${channel}&parent=${parent}`;
-  document.getElementById("twitch-player").src = embedUrl;
-</script>
+    const params = new URLSearchParams(window.location.search);
+    const channel = params.get("channel") || "auronplay";
+    const parent = "dpactir2707.github.io";
+    const embedUrl = "https://player.twitch.tv/?channel=${channel}&parent=${parent}";
+    document.getElementById("twitch-player").src = embedUrl;
+  </script>
 </body>
 </html>
