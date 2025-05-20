@@ -31,11 +31,11 @@
     scrolling="no"
   ></iframe>
 
-  <script>
+ <script>
     const params = new URLSearchParams(window.location.search);
     const channel = params.get("channel") || "auronplay";
     const parent = "dpactir2707.github.io";
-    const embedUrl = "https://player.twitch.tv/?channel=${channel}&parent=${parent}";
+    const embedUrl = `https://player.twitch.tv/?channel=${channel}&parent=${parent}`;
     document.getElementById("twitch-player").src = embedUrl;
   </script>
 </body>
